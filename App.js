@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 export default function App() {
+  const Web_URL = `https://port-0-node-ejs-gilmaro-19k5ygi525lcsucitd.gksl2.cloudtype.app/`;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <WebView style={styles.container}
+      source={{ uri:Web_URL }}
+    />
   );
 }
 
